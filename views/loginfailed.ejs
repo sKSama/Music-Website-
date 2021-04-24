@@ -1,0 +1,86 @@
+<script>
+alert("Invalid Credentials!!!");
+</script>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<style media="screen">
+</style>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rythm</title>
+  <link rel="shortcut icon" href="images\favicon.png">
+  <link rel="stylesheet" href="css\styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;900&family=Kanit:ital,wght@1,300&display=swap" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<%- include ('common/nav') ;-%>
+
+
+  <section class="back" id="home">
+
+    <div class="bg-overlay"></div>
+
+    <div class="logintable">
+      <div class="tableback"></div>
+
+
+          <h1 class="logform formhead">Login</h1>
+
+          <form method="post" action="/login">
+            <label class="logtxt" id="email" for="email">Email:</label><br>
+            <input class="inpcss" id="emailinp" type="text" name="email"><br>
+            <label class="logtxt" id="pass" for="pass">Password:</label><br>
+            <input class="inpcss" type="password" id="passinp" name="pass">
+
+            <label class="usm" id="usml" for="social">Or Use Social Media:</label><br>
+            <ul class="socailp">
+                <li><a href="#"><span></span></a></li>
+                <li><a href="#"><span></span></a></li>
+                <li><a href="#"><span></span></a></li>
+                <li><a href="#"><span></span></a></li>
+            </ul>
+              <input class="sub" id="subl" type="submit" value="Login">
+          </form>
+
+        <div class="vl"></div>
+
+        <h1 class="regform formhead">Register</h1>
+
+        <form name="reg" method="post" action="/register" onsubmit=" return ValidateEmail(document.reg.emailr, document.reg.namer, document.reg.passr)">
+          <label class="logtxt" id="emailr" for="emailr">Email:</label><br>
+          <input class="inpcss" id="emailinpr" type="text" name="emailr"><br>
+
+          <label class="logtxt" id="namer" for="namer">Name:</label><br>
+          <input class="inpcss" id="nameinpr" type="text" name="namer"><br>
+
+          <label class="logtxt" id="passr" for="passr">Password:</label><br>
+          <input class="inpcss" type="password" id="passinpr" name="passr">
+
+          <label class="usm" id="usmr" for="social">Or Use Social Media:</label><br>
+
+
+          <!-- Social media icons have been added via online resources -->
+          <ul class="socailpr">
+              <li><a href="#"><span></span></a></li>
+              <li><a href="#"><span></span></a></li>
+              <li><a href="#"><span></span></a></li>
+              <li><a href="#"><span></span></a></li>
+          </ul>
+            <input class="sub" id="subr" type="submit" value="Register"/>
+        </form>
+
+
+
+    </div>
+  </section>
+
+
+</body>
+<script src="index.js"></script>
+</html>
