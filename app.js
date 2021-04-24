@@ -40,6 +40,12 @@ app.post("/login", function(req, res){
   //find method
 userData.find({email: logemail},function(err,users){
   if(err) console.log(err);
+
+
+  if(users.length === 0){
+    res.redirect("/loginfailed");
+  }
+  else{
   let ogpass= users[0]['Password'];
 
   if(ogpass===passwordentered)
@@ -53,7 +59,7 @@ userData.find({email: logemail},function(err,users){
     console.log("UnSuccessful");
     res.redirect("/loginfailed");
   }
-
+}
 })
 
 });
