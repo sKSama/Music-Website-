@@ -9,7 +9,7 @@ const userData=require('./models/users')
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
-app.use(express.static("public"));
+app.use(express.static("Public"));
 
 mongoose.connect("mongodb+srv://sksama:zxcv@signup.rfmew.mongodb.net/signup",{useNewUrlParser: true, useUnifiedTopology: true})
 
