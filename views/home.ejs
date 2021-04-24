@@ -29,7 +29,7 @@
 
           <h1 class="logform formhead">Login</h1>
 
-          <form method="post" action="/login">
+          <form name=login method="post" action="/login" onsubmit=" return ValidateLoginEmail(document.login.email)">
             <label class="logtxt" id="email" for="email">Email:</label><br>
             <input class="inpcss" id="emailinp" type="text" name="email"><br>
             <label class="logtxt" id="pass" for="pass">Password:</label><br>
